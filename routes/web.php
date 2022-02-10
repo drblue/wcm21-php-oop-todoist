@@ -31,6 +31,4 @@ Route::get('/hej', function () {
 	]);
 });
 
-Route::get('/todos', function () {
-	return view('todos');
-});
+Route::get('/todos', [App\Http\Controllers\TodosController::class, 'index']);
