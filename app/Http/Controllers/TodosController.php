@@ -7,6 +7,14 @@ use Illuminate\Http\Request;
 class TodosController extends Controller
 {
 	public function index() {
-		return view('todos/index');
+		$todos = [
+			'Learn PHP',
+			'Learn Laravel',
+			'Profit 💰',
+		];
+
+		return view('todos/index', [
+			'todos' => $todos
+		]);
 	}
 }
