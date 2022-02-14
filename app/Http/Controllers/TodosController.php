@@ -15,4 +15,12 @@ class TodosController extends Controller
 			'todos' => $todos
 		]);
 	}
+
+	public function show($todo) {
+		$todo = Todo::findOrFail($todo);
+
+		return view('todos/show', [
+			'todo' => $todo
+		]);
+	}
 }
