@@ -9,7 +9,9 @@
 		<ol>
 			@foreach($todos as $todo)
 				<li>
-					{{ $todo->title }}
+					<a href="/todos/{{ $todo->id }}">
+						{{ $todo->title }}
+					</a>
 					@if($todo->completed)
 						🥳
 					@endif

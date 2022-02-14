@@ -18,3 +18,4 @@ Route::get('/', function () {
 })->name('home');
 
 Route::get('/todos', [App\Http\Controllers\TodosController::class, 'index'])->name('todos.index');
+Route::get('/todos/{todo}', [App\Http\Controllers\TodosController::class, 'show'])->name('todos.show');
