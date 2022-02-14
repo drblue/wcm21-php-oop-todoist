@@ -8,7 +8,12 @@
 	@if(count($todos) > 0)
 		<ol>
 			@foreach($todos as $todo)
-				<li>{{ $todo }}</li>
+				<li>
+					{{ $todo->title }}
+					@if($todo->completed)
+						🥳
+					@endif
+				</li>
 			@endforeach
 		</ol>
 	@else
