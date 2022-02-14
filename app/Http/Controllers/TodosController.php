@@ -16,9 +16,7 @@ class TodosController extends Controller
 		]);
 	}
 
-	public function show($todo) {
-		$todo = Todo::findOrFail($todo);
-
+	public function show(Todo $todo) {
 		return view('todos/show', [
 			'todo' => $todo
 		]);
