@@ -1,7 +1,10 @@
 @extends('layouts/app')
 
 @section('content')
-	<h1>{{ $project->title }}</h1>
+	<div class="d-flex justify-content-between align-items-center my-3">
+		<h1>{{ $project->title }}</h1>
+		<a href="{{ route('projects.edit', ['project' => $project]) }}" class="btn btn-warning">Edit project</a>
+	</div>
 
 	<!-- show this project's todos -->
 	@if(count($project->todos) > 0)

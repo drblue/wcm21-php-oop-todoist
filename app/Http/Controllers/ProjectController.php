@@ -28,7 +28,7 @@ class ProjectController extends Controller
 	 */
 	public function create()
 	{
-		die("Hello from create project");
+		return view('projects/create');
 	}
 
 	/**
@@ -39,7 +39,15 @@ class ProjectController extends Controller
 	 */
 	public function store(Request $request)
 	{
-		//
+		// somehow get the data from the form and create a new project using that data
+		$validInput = $request->validate([
+			'title' => 'required|min:3',
+		]);
+
+		$project = Project::create($validInput);
+
+		// also, redirect the user to the new project
+		return redirect(route('projects.show', ['project' => $project]));
 	}
 
 	/**

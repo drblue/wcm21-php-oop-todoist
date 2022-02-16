@@ -1,7 +1,10 @@
 @extends('layouts/app')
 
 @section('content')
-	<h1>Projects</h1>
+	<div class="d-flex justify-content-between align-items-center my-3">
+		<h1>Projects</h1>
+		<a href="{{ route('projects.create') }}" class="btn btn-primary">Create a new project</a>
+	</div>
 
 	@if(count($projects) > 0)
 		<table class="table table-striped table-hover table-responsive">
