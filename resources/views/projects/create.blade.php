@@ -13,17 +13,19 @@
 		</div>
 	@endif
 
-	<div class="row">
-		<form method="POST" action="{{ route('projects.store') }}">
-			@csrf
+	<div class="card">
+		<div class="card-body">
+			<form method="POST" action="{{ route('projects.store') }}">
+				@csrf
 
-			<div class="mb-3">
-				<label for="title" class="form-label">Title</label>
-				<input type="text" class="form-control" id="title" name="title" required>
-			</div>
+				<div class="mb-3">
+					<label for="title" class="form-label">Title</label>
+					<input type="text" class="form-control" id="title" name="title" required>
+				</div>
 
-			<button type="submit" class="btn btn-success">Create</button>
-		</form>
+				<button type="submit" class="btn btn-success">Create</button>
+			</form>
+		</div>
 	</div>
 
 	<div class="mt-4">

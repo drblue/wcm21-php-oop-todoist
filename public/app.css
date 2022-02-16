@@ -2,3 +2,7 @@ body {
 	background-color: #fafafa;
 	color: #222;
 }
+
+h1 {
+	margin-bottom: 0.5em;
+}
