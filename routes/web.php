@@ -17,5 +17,5 @@ Route::get('/', function () {
 	return view('home');
 })->name('home');
 
-Route::get('/todos', [App\Http\Controllers\TodosController::class, 'index'])->name('todos.index');
-Route::get('/todos/{todo}', [App\Http\Controllers\TodosController::class, 'show'])->name('todos.show');
+Route::get('/todos', [App\Http\Controllers\TodoController::class, 'index'])->name('todos.index');
+Route::get('/todos/{todo}', [App\Http\Controllers\TodoController::class, 'show'])->name('todos.show');
