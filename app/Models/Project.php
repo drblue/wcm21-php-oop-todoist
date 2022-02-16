@@ -12,4 +12,11 @@ class Project extends Model
 	 * @var array
 	 */
 	protected $fillable = ['title'];
+
+	/**
+	 * Get all todos for this project.
+	 */
+	public function todos() {
+		return $this->hasMany(Todo::class);
+	}
 }

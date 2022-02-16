@@ -12,4 +12,11 @@ class Todo extends Model
 	 * @var array
 	 */
 	protected $fillable = ['title', 'description', 'completed'];
+
+	/**
+	 * Get the project that this todo belongs to.
+	 */
+	public function project() {
+		return $this->belongsTo(Project::class);
+	}
 }
