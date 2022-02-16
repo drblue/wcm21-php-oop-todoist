@@ -18,7 +18,7 @@
 					<tr>
 						<td>{{ $project->id }}</td>
 						<td>{{ $project->title }}</td>
-						<td>TBD</td>
+						<td>{{ $project->todos()->count() }}</td>
 						<td>
 							<a href="/projects/{{ $project->id }}" class="btn btn-primary btn-sm">
 								View

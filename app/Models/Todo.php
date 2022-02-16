@@ -11,7 +11,7 @@ class Todo extends Model
 	 *
 	 * @var array
 	 */
-	protected $fillable = ['title', 'description', 'completed'];
+	protected $fillable = ['title', 'description', 'completed', 'project_id'];
 
 	/**
 	 * Get the project that this todo belongs to.
