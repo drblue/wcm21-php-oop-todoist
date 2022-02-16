@@ -30,5 +30,8 @@ Route::delete('/projects/{project}', [ProjectController::class, 'destroy'])->nam
 */
 Route::resource('/projects', ProjectController::class);
 
+/*
 Route::get('/projects/{project}/todos', [TodoController::class, 'index'])->name('todos.index');
 Route::get('/projects/{project}/todos/{todo}', [TodoController::class, 'show'])->name('todos.show');
+*/
+Route::resource('/projects/{project}/todos', TodoController::class);
