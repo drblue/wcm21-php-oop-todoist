@@ -27,7 +27,7 @@
 							@endif
 						</td>
 						<td>
-							<a href="/todos/{{ $todo->id }}" class="btn btn-primary btn-sm">
+							<a href="/projects/{{ $project->id }}/todos/{{ $todo->id }}" class="btn btn-primary btn-sm">
 								View
 							</a>
 						</td>
