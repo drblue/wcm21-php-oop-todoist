@@ -71,11 +71,15 @@ class ProjectController extends Controller
 	 */
 	public function edit(Project $project)
 	{
-		//
+		return view('projects/edit', [
+			'project' => $project
+		]);
 	}
 
 	/**
 	 * Update the specified resource in storage.
+	 *
+	 * /projects/{project}
 	 *
 	 * @param  \Illuminate\Http\Request  $request
 	 * @param  \App\Models\Project  $project
@@ -83,7 +87,16 @@ class ProjectController extends Controller
 	 */
 	public function update(Request $request, Project $project)
 	{
-		//
+		// validate input
+		$validInput = $request->validate([
+			'title' => 'required|min:3',
+		]);
+
+		// update project with validated input
+		$project->update($validInput);
+
+		// also, redirect the user to the updated project
+		return redirect()->route('projects.show', ['project' => $project]);
 	}
 
 	/**
