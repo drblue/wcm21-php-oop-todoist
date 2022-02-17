@@ -3,15 +3,7 @@
 @section('content')
 	<h1>Create a new Project</h1>
 
-	@if ($errors->any())
-		<div class="alert alert-danger">
-			<ul>
-				@foreach ($errors->all() as $error)
-					<li>{{ $error }}</li>
-				@endforeach
-			</ul>
-		</div>
-	@endif
+	@include('partials/validation_errors')
 
 	<div class="card">
 		<div class="card-body">

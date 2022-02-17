@@ -47,7 +47,9 @@ class ProjectController extends Controller
 		$project = Project::create($validInput);
 
 		// also, redirect the user to the new project
-		return redirect(route('projects.show', ['project' => $project]));
+		return redirect()
+			->route('projects.show', ['project' => $project])
+			->with('success', 'Yay project!');
 	}
 
 	/**
@@ -96,7 +98,9 @@ class ProjectController extends Controller
 		$project->update($validInput);
 
 		// also, redirect the user to the updated project
-		return redirect()->route('projects.show', ['project' => $project]);
+		return redirect()
+			->route('projects.show', ['project' => $project])
+			->with('success', 'Project successfully updated 💪🏻!');
 	}
 
 	/**
@@ -109,6 +113,8 @@ class ProjectController extends Controller
 	{
 		$project->delete();
 
-		return redirect()->route('projects.index');
+		return redirect()
+			->route('projects.index')
+			->with('success', 'Project successfully deleted 😈.');
 	}
 }

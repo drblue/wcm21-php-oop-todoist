@@ -6,6 +6,8 @@
 		<a href="{{ route('projects.create') }}" class="btn btn-primary">Create a new project</a>
 	</div>
 
+	@include('partials/status')
+
 	@if(count($projects) > 0)
 		<table class="table table-striped table-hover table-responsive">
 			<thead>

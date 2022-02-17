@@ -15,6 +15,8 @@
 		</div>
 	</div>
 
+	@include('partials/status')
+
 	<!-- show this project's todos -->
 	@if(count($project->todos) > 0)
 		<table class="table table-striped table-hover table-responsive">

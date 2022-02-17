@@ -3,17 +3,7 @@
 @section('content')
 	<h1>Edit project: {{ $project->title }}</h1>
 
-	@if ($errors->any())
-		<div class="alert alert-danger">
-			<ul>
-				@foreach ($errors->all() as $error)
-					<li>{{ $error }}</li>
-				@endforeach
-			</ul>
-		</div>
-	@endif
-
-	@dump(['old_title' => old('title')])
+	@include('partials/validation_errors')
 
 	<div class="card">
 		<div class="card-body">
